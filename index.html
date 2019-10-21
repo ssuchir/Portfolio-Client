@@ -1,37 +1,119 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Stocks</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>My Portfolio</h1>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <br/>
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
-      <form id='sign-up'>
-         <h2>Sign up</h2>
-         <input type="email" name="credentials[email]" placeholder='Enter email'>
-         <input type="password" name="credentials[password]" placeholder='password'>
-         <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again'>
-         <input type="submit" class="btn btn-info" value="Sign up">
-       </form>
+<body>
+  <h1>GA Capital Management</h1>
 
-       <h3 id="message"></h3>
+  <br />
 
-       <form id='sign-in'>
-         <h2>Sign in</h2>
-         <input type="email" name="credentials[email]" placeholder='Enter email'>
-         <input type="password" name="credentials[password]" placeholder='password'>
-         <input type="submit" class="btn btn-info" value="Sign in">
-       </form>
-    </body>
+  <form id='sign-up'>
+    <h2>Sign up</h2>
+    <input type="email" name="credentials[email]" placeholder='Enter email'>
+    <input type="password" name="credentials[password]" placeholder='password'>
+    <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again'>
+    <input type="submit" class="btn btn-info" value="Sign up">
+  </form>
+
+  <h3 id="message"></h3>
+
+  <form id='sign-in'>
+    <h2>Sign in</h2>
+    <input type="email" name="credentials[email]" placeholder='Enter email'>
+    <input type="password" name="credentials[password]" placeholder='password'>
+    <input type="submit" class="btn btn-info" value="Sign in">
+  </form>
+
+  <form id='change-password'>
+    <h2>Change Password</h2>
+    <input type="password" name="passwords[old]" placeholder='Enter old password'>
+    <input type="password" name="passwords[new]" placeholder='Enter new password'>
+    <input type="submit" class="btn btn-info" value="Submit">
+  </form>
+
+  <br>
+  <form id='sign-out'>
+
+    <button class="btn btn-primary">Sign Out</button>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <!-- Modal button and action -->
+    <button type="button" class="btn btn-success add-button" data-toggle="modal" data-target="#transaction-modal" data-backdrop="static" data-keyboard="false">Update Investments
+    </button>
+
+
+    <div class="modal fade" id="transaction-modal" tabindex="-1" role="dialog" aria-labelledby="transaction-modalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="transaction-modalLabel">Add a Stock</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="add-transaction-modal" class="form-group" data-show="false">
+              <fieldset>
+                <label for="name">Company</label>
+                <br>
+                <input type="string" name="Name" placeholder="Ticker" class="form-control" required>
+                <br>
+
+                <label for="Dividends">Dividend Reinvestment?</label>
+
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios">
+                  <label class="custom-control-label" for="defaultGroupExample1">Yes</label>
+                </div>
+
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios" checked>
+                  <label class="custom-control-label" for="defaultGroupExample2">No</label>
+                </div>
+
+
+                <br>
+
+                <label for="Price">Price</label>
+
+                <br>
+                <input type="integer" name="Price" placeholder="$" class="form-control" required>
+                <br>
+                <label for="date of Purchase">Date of Purchase</label>
+                <br>
+                <input type="date" name="date of Purchase" class="form-control" required>
+                <br>
+                <hr>
+                <input type="submit" class="btn btn-primary" value="Add/Edit">
+              </fieldset>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <span class="modal-message"></span>
+            <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+
+
+</body>
 
 </html>
