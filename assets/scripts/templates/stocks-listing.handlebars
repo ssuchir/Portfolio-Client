@@ -1,0 +1,17 @@
+
+<!-- {{#each stocks as |stock|}}
+
+  <section class='stock_sections' data-id="{{stock.id}}">
+    <h1 data-id="{{stock.id}}"> <small>{{stock.date}}</small></h1>
+      {{stock.duration}} minutes | ID: {{stock.id}} | type: {{stock.stock_type}}
+      <br>
+      <button type='submit' class="remove_button col btn btn-default">Delete this stock</button>
+      <p>Edit this stock below:</p>
+      <form class="single-form edit_form">
+        <input type='date' name="date" placeholder="Enter Date" />
+        <input type='number' name="duration" min="0" max='1440' placeholder="Enter Duration" />
+        <input type='string' name="stock_type" min="0" placeholder="Enter Stock Type" />
+        <input type="submit" />
+      </form>
+  </section>
+{{/each}} -->
