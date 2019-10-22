@@ -17,8 +17,8 @@
   <h1>GA Capital Management</h1>
 
   <br/>
-
-  <form id='sign-up'>
+<!-- added class AfterSignInHide -->
+  <form id='sign-up' class="AfterSignInHide">
     <h2>Sign up</h2>
     <input type="email" name="credentials[email]" placeholder='Enter email'>
     <input type="password" name="credentials[password]" placeholder='password'>
@@ -28,27 +28,28 @@
 
   <h3 id="message"></h3>
 
-  <form id='sign-in'>
+  <form id='sign-in' class="AfterSignInHide">
     <h2>Sign in</h2>
     <input type="email" name="credentials[email]" placeholder='Enter email'>
     <input type="password" name="credentials[password]" placeholder='password'>
     <input type="submit" class="btn btn-info" value="Sign in">
   </form>
 
-  <form id='change-password'>
+  <form id='change-password' class="AfterSignInShow">
     <h2>Change Password</h2>
     <input type="password" name="passwords[old]" placeholder='Enter old password'>
     <input type="password" name="passwords[new]" placeholder='Enter new password'>
     <input type="submit" class="btn btn-info" value="Submit">
   </form>
 
-  <br>
-  <!-- <form id='sign-out'>
-    <h2>Sign out</h2>
-  </form> -->
+  <form id= 'sign-out' class="AfterSignInShow">
+  <button class="btn btn-danger" >Sign Out</button>
+</form>
 
-
-    <form id="create-stock">
+<br>
+<br>
+    <div id="create-stock-message" class="AfterSignInShow"></div>
+    <form id="create-stock" class="AfterSignInShow">
         <input type="text" name="stock[name]" placeholder="Stock Ticker" required>
         <input type="date" name="stock[purchase_on]" required>
         <input type="text" name="stock[start_price]" placeholder="$ Buy Price" required>
@@ -64,16 +65,15 @@
 
 <br>
 
-
       <!-- <h2>Update a Stock</h2> -->
 
-      <div id="update-stock-message" class="no-display-until-view-all"></div>
-      <form id="update-stock" class=no-display-until-view-all>
+      <div id="update-stock-message" class="AfterSignInShow"></div>
+      <form id="update-stock" class="AfterSignInShow">
 
       <input type="text" name="stock[name]" placeholder="Stock Ticker" required>
       <input type="date" name="stock[purchase_on]" required>
       <input type="text" name="stock[start_price]" placeholder="$ Buy Price" required>
-      <input type="number" min="1" name="stock[id]" placeholder="stock ID" required>
+      <input type="number" min="1" name="stock[id]" placeholder="Stock ID" required>
 
 
       <button id="update-stock-button" class="no-display btn btn-primary">Update this stock</button>
@@ -81,66 +81,17 @@
       <br>
       <br>
 
-      <div id="delete-stock-message" class="no-display-until-view-all"></div>
-      <form id="delete-stock">
+      <div id="delete-stock-message" class="AfterSignInShow"></div>
+      <form id="delete-stock" class="AfterSignInShow">
       <input type="number" name="stock[id]" placeholder="Stock ID" required>
       <button id="delete-stock-button" class="no-display btn btn-danger">Sell this Stock</button>
       </form>
       <br>
       <br>
 
-      <div id="view-all-stocks-message"></div>
-      <button id="view-all-stocks-button" class="btn btn-primary">See all stocks</button>
+      <div id="view-all-stocks-message" class="AfterSignInShow"></div>
+      <button id="view-all-stocks-button" class="AfterSignInShow btn btn-primary">View Portfolio</button>
 <br>
-
-
-
-    <!-- <button class="btn btn-primary">Sign Out</button>
-
-    <button type="button" class="btn btn-success add-button" data-toggle="modal" data-target="#transaction-modal" data-backdrop="static" data-keyboard="false">Update Investments
-    </button>
-
-
-    <div class="modal fade" id="transaction-modal" tabindex="-1" role="dialog" aria-labelledby="transaction-modalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="transaction-modalLabel">Add a Stock</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form id="add-transaction-modal" class="form-group" data-show="false">
-              <fieldset>
-                <label for="name">Company</label>
-                <br>
-                <input type="string" name="Name" placeholder="Ticker" class="form-control" required>
-
-                <br>
-
-                <label for="Price">Price</label>
-
-                <br>
-                <input type="integer" name="Price" placeholder="$" class="form-control" required>
-                <br>
-                <label for="date of Purchase">Date of Purchase</label>
-                <br>
-                <input type="date" name="date of Purchase" class="form-control" required>
-                <br>
-                <hr>
-                <input type="submit" class="btn btn-primary" value="Add Stock">
-              </fieldset>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <span class="modal-message"></span>
-            <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
 
 </body>
 

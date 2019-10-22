@@ -4,7 +4,7 @@ const config = require('./../config')
 const store = require('./../store')
 
 const createStock = function (formData) {
-  console.log('createStock')
+  // console.log('createStock')
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/stocks',

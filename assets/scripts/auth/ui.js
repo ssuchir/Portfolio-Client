@@ -4,15 +4,22 @@ const store = require('../store')
 
 const successMessage = function (newText) {
   $('#message').text(newText)
+  setTimeout(function () {
+    $('#message').text('')
+  }, 5000)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
 }
 
 const failureMessage = function (newText) {
   $('#message').text(newText)
+  setTimeout(function () {
+    $('#message').text('')
+  }, 3000)
   $('#message').removeClass('success')
   $('#message').addClass('failure')
 }
+
 const onSignUpSuccess = function () {
   successMessage('Signed up successfully!')
 }
@@ -20,10 +27,13 @@ const onSignUpSuccess = function () {
 const onSignUpFailure = function () {
   failureMessage('Sign up failed.')
 }
-
+// added AfterSignInHide function here
 const onSignInSuccess = function (responseData) {
   successMessage('Signed in successfully!')
-  console.log('responseData is', responseData)
+  $('.AfterSignInHide').hide()
+  $('.AfterSignInShow').show()
+  $('#sign-in').trigger('reset')
+  // console.log('responseData is', responseData)
   store.user = responseData.user
   // console.log('store is', store)
 }
@@ -41,6 +51,8 @@ const onChangePasswordFailure = function () {
 
 const onSignOutSuccess = function () {
   successMessage('Signed out successfully!')
+  $('.AfterSignInShow').hide()
+  $('.AfterSignInHide').show()
 }
 
 const onSignOutFailure = function () {
