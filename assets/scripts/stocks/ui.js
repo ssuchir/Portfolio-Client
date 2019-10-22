@@ -56,10 +56,31 @@ const onGetAllStocksSuccess = function (responseData) {
   }
 }
 
+const onUpdateStockSuccess = function (responseData) {
+  $('#update-stock-message').text('Stock updated successfully')
+  setTimeout(function () {
+    $('#update-stock-message').text('')
+  }, 4000)
+  $('#update-stock-message').removeClass('failure').addClass('success')
+  $('#update-stock').trigger('reset')
+}
+
+const onUpdateStockFailure = function () {
+  $('#update-stock-message').text('Stock update failed')
+  $('#update-stock-message').removeClass('success').addClass('failure')
+  setTimeout(function () {
+    $('#update-stock-message').text('')
+  }, 4000)
+}
+
+
+
 module.exports = {
   successMessage,
   failureMessage,
   onCreateStockSuccess,
   onCreateStockFailure,
-  onGetAllStocksSuccess
+  onGetAllStocksSuccess,
+  onUpdateStockSuccess,
+  onUpdateStockFailure
 }
