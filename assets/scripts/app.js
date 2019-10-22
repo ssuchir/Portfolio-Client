@@ -13,7 +13,7 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#create-stock').on('submit', stockEvents.onCreateStock)
-  // $('#view-all-memories-button').on('click', stockEvents.onGetAllMemories)
+  $('#view-all-stocks-button').on('click', stockEvents.onGetAllStocks)
   $('#update-stock').on('submit', stockEvents.onUpdateStock)
   $('#delete-stock').on('submit', stockEvents.onDestroyStock)
 })

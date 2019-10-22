@@ -15,7 +15,7 @@ const createStock = function (formData) {
   })
 }
 
-const getStock = function () {
+const getAllStocks = function () {
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + '/stocks/',
@@ -59,7 +59,7 @@ const destroyStock = function (formData) {
 
 module.exports = {
   createStock,
-  getStock,
+  getAllStocks,
   updateStock,
   // showStock,
   destroyStock
