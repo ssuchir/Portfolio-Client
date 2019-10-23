@@ -22,6 +22,7 @@ const failureMessage = function (newText) {
 
 const onSignUpSuccess = function () {
   successMessage('Signed up successfully!')
+  $('#sign-up').trigger('reset')
 }
 
 const onSignUpFailure = function () {
@@ -39,14 +40,17 @@ const onSignInSuccess = function (responseData) {
 }
 const onSignInFailure = function () {
   failureMessage('Sign in failed.')
+  $('#sign-in').trigger('reset')
 }
 
 const onChangePasswordSuccess = function () {
   successMessage('Changed password successfully!')
+  $('#change-password').trigger('reset')
 }
 
 const onChangePasswordFailure = function () {
   failureMessage('Password change failed.')
+  $('#change-password').trigger('reset')
 }
 
 const onSignOutSuccess = function () {

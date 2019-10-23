@@ -57,7 +57,7 @@ const onGetAllStocksSuccess = function (responseData) {
 }
 
 const onUpdateStockSuccess = function (responseData) {
-  $('#update-stock-message').text('Stock updated successfully.Click "See all Stocks" for your updated portfolio.')
+  $('#update-stock-message').text('Stock updated successfully.Click "View Portfolio" for your updated portfolio.')
   setTimeout(function () {
     $('#update-stock-message').text('')
   }, 5000)
@@ -74,7 +74,7 @@ const onUpdateStockFailure = function () {
 }
 
 const onDestroyStockSuccess = function (responseData) {
-  $('#delete-stock-message').text('Stock deleted successfully. Click "See all Stocks" for your updated portfolio.')
+  $('#delete-stock-message').text('Stock deleted successfully. Click "View Portfolio" for your updated portfolio.')
   $('#delete-stock-message').removeClass('failure').addClass('success')
   setTimeout(function () {
     $('#delete-stock-message').text('')
