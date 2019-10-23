@@ -13,13 +13,19 @@ After that, I started building the API and tested CRUD actions with curl scripts
 I want to make the formating of the actual porfolio to appear in a table that is sorted by date. I want to complete one of the stretch goals of this project which is to connect to a 3rd party API. I found some real-time stock APIs, so if connected, the user would just have to input the stock ticker and the date of purchase. It could then pull the price at purchase and current price, and even provide some useful stock retun calculations.
 
 ## Links
-Link to API: https://github.com/ssuchir/Project_2_api
+Link to API: https://github.com/ssuchir/Project_2_api 
+
 Link to website: https://ssuchir.github.io/Portfolio-Client/
+
 Link to wireframes: https://imgur.com/xuY3c9a
+
 Link to ERD: https://imgur.com/UybeZhj
 
   User Stories:
   As a user, I want to be able to sign up/in/out and change password. 
+  
   As a user, I want to input a stock with a name, price, and date into my portfolio.
+  
   As a user, I want to be able to view and update stock’s price, or delete it from my portfolio.
+  
   As a user, I want to be able to check ROI for stocks in my portfolio.
