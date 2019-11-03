@@ -48,13 +48,17 @@
 
 <br>
 <br>
+<h2 id="header" class="AfterSignInShow"> My Stocks </h2>
+<br>
+<br>
+
     <div id="create-stock-message" class="AfterSignInShow"></div>
     <form id="create-stock" class="AfterSignInShow">
         <input type="text" name="stock[name]" placeholder="Stock Ticker" required>
         <input type="date" name="stock[purchase_on]" required>
         <input type="text" name="stock[start_price]" placeholder="$ Buy Price" required>
-
-  <br>
+<br>
+<br>
   <button class="blur btn btn-primary">Create Stock</button>
   </form>
 
@@ -90,9 +94,59 @@
       <br>
 
       <div id="view-all-stocks-message" class="AfterSignInShow"></div>
-      <button id="view-all-stocks-button" class="AfterSignInShow btn btn-primary">View Portfolio</button>
+      <button id="view-all-stocks-button" class="AfterSignInShow btn btn-primary">View Stock Portfolio</button>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2 id="header2" class="AfterSignInShow" >My Bonds</h2>
+<br>
+<br>
+<!-- bond code -->
+<div id="create-bond-message" class="AfterSignInShow"></div>
+<form id="create-bond" class="AfterSignInShow">
+    <input type="text" name="bond[name]" placeholder="Bond Name" required>
+    <input type="date" name="bond[purchase_on]" required>
+    <input type="text" name="bond[start_price]" placeholder="$ Buy Price" required>
+<br>
+<br>
+<button class="blur btn btn-primary">Create Bond</button>
+</form>
+
 <br>
 
+
+<!-- <h2>View Portfolio</h2> -->
+
+<br>
+
+  <!-- <h2>Update a Bond</h2> -->
+
+  <div id="update-bond-message" class="AfterSignInShow"></div>
+  <form id="update-bond" class="AfterSignInShow">
+
+  <input type="text" name="bond[name]" placeholder="Bond Name" required>
+  <input type="date" name="bond[purchase_on]" required>
+  <input type="text" name="bond[start_price]" placeholder="$ Buy Price" required>
+  <input type="number" min="1" name="bond[id]" placeholder="Bond ID" required>
+
+
+  <button id="update-bond-button" class="no-display btn btn-primary">Update this bond</button>
+  </form>
+  <br>
+  <br>
+
+  <div id="delete-bond-message" class="AfterSignInShow"></div>
+  <form id="delete-bond" class="AfterSignInShow">
+  <input type="number" name="bond[id]" placeholder="Bond ID" required>
+  <button id="delete-bond-button" class="no-display btn btn-danger">Sell this Bond</button>
+  </form>
+  <br>
+  <br>
+
+  <div id="view-all-bonds-message" class="AfterSignInShow"></div>
+  <button id="view-all-bonds-button" class="AfterSignInShow btn btn-primary">View Bond Portfolio</button>
 </body>
 
 </html>

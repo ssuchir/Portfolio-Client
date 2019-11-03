@@ -24,6 +24,9 @@ const onCreateStockSuccess = function (responseData) {
   $('#create-stock-message').text('New stock successfully added!')
   successMessage('New stock created successfully!')
   store.stock = responseData.stock
+  setTimeout(function () {
+    $('#create-stock-message').text('')
+  }, 5000)
   // console.log(store.stock)
   $('#create-stock').trigger('reset')
   // console.log(responseData)

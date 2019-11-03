@@ -4,6 +4,7 @@
 // const example = require('./example')
 const authEvents = require('./auth/events')
 const stockEvents = require('./stocks/events')
+const bondEvents = require('./bonds/events')
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
@@ -22,4 +23,15 @@ $(() => {
   $('#delete-stock').hide()
   $('#update-stock').hide()
   $('#view-all-stocks-button').hide()
+  // bond code
+  $('#create-bond').on('submit', bondEvents.onCreateBond)
+  $('#view-all-bonds-button').on('click', bondEvents.onGetAllBonds)
+  $('#update-bond').on('submit', bondEvents.onUpdateBond)
+  $('#delete-bond').on('submit', bondEvents.onDestroyBond)
+  $('#create-bond').hide()
+  $('#delete-bond').hide()
+  $('#update-bond').hide()
+  $('#view-all-bonds-button').hide()
+  $('#header').hide()
+  $('#header2').hide()
 })
